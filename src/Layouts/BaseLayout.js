@@ -1,11 +1,12 @@
 import Footer from "../Components/Footer";
 import NavBar from "../Components/NavBar";
+import './BaseLayout.css'
 
 export default function BaseLayout(props) {
   return (
-    <div>
+    <div className='baseLayout'>
         <NavBar/>
-        <div>
+        <div className='baseLayoutBody'>
             {props.children}
         </div>
         <Footer/>
