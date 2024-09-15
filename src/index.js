@@ -9,6 +9,7 @@ import {
 import Home from './Pages/Home';
 import ErrorPage from './Pages/ErrorPage';
 import DiscordTime from './Pages/DiscordTime';
+import BaseLayout from './Layouts/BaseLayout';
 
 const router = createBrowserRouter([
   {
@@ -16,12 +17,13 @@ const router = createBrowserRouter([
     element: <Home />,
     errorElement: <ErrorPage />,
   },
+  
   {
     path: "/discord-timestamp",
-    element: <DiscordTime />,
+    element: <BaseLayout><DiscordTime /></BaseLayout>,
     errorElement: <ErrorPage />,
-  },
-  
+  }
+
 ]);
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
